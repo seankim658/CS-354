@@ -1,0 +1,239 @@
+
+decode.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	55                   	push   %ebp
+   1:	89 e5                	mov    %esp,%ebp
+   3:	83 e4 f0             	and    $0xfffffff0,%esp
+   6:	83 ec 20             	sub    $0x20,%esp
+   9:	e8 fc ff ff ff       	call   a <main+0xa>
+   e:	89 44 24 14          	mov    %eax,0x14(%esp)
+  12:	8b 44 24 14          	mov    0x14(%esp),%eax
+  16:	89 44 24 04          	mov    %eax,0x4(%esp)
+  1a:	c7 04 24 00 00 00 00 	movl   $0x0,(%esp)
+  21:	e8 fc ff ff ff       	call   22 <main+0x22>
+  26:	e8 fc ff ff ff       	call   27 <main+0x27>
+  2b:	89 44 24 18          	mov    %eax,0x18(%esp)
+  2f:	8b 44 24 18          	mov    0x18(%esp),%eax
+  33:	89 44 24 04          	mov    %eax,0x4(%esp)
+  37:	8b 44 24 14          	mov    0x14(%esp),%eax
+  3b:	89 04 24             	mov    %eax,(%esp)
+  3e:	e8 fc ff ff ff       	call   3f <main+0x3f>
+  43:	89 44 24 1c          	mov    %eax,0x1c(%esp)
+  47:	8b 44 24 1c          	mov    0x1c(%esp),%eax
+  4b:	89 44 24 04          	mov    %eax,0x4(%esp)
+  4f:	c7 04 24 10 00 00 00 	movl   $0x10,(%esp)
+  56:	e8 fc ff ff ff       	call   57 <main+0x57>
+  5b:	b8 00 00 00 00       	mov    $0x0,%eax
+  60:	c9                   	leave  
+  61:	c3                   	ret    
+
+00000062 <read_cipher_file>:
+  62:	55                   	push   %ebp
+  63:	89 e5                	mov    %esp,%ebp
+  65:	83 ec 28             	sub    $0x28,%esp
+  68:	c7 44 24 04 1f 00 00 	movl   $0x1f,0x4(%esp)
+  6f:	00 
+  70:	c7 04 24 21 00 00 00 	movl   $0x21,(%esp)
+  77:	e8 fc ff ff ff       	call   78 <read_cipher_file+0x16>
+  7c:	89 45 ec             	mov    %eax,-0x14(%ebp)
+  7f:	83 7d ec 00          	cmpl   $0x0,-0x14(%ebp)
+  83:	75 31                	jne    b6 <read_cipher_file+0x54>
+  85:	a1 00 00 00 00       	mov    0x0,%eax
+  8a:	89 44 24 0c          	mov    %eax,0xc(%esp)
+  8e:	c7 44 24 08 1e 00 00 	movl   $0x1e,0x8(%esp)
+  95:	00 
+  96:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+  9d:	00 
+  9e:	c7 04 24 30 00 00 00 	movl   $0x30,(%esp)
+  a5:	e8 fc ff ff ff       	call   a6 <read_cipher_file+0x44>
+  aa:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+  b1:	e8 fc ff ff ff       	call   b2 <read_cipher_file+0x50>
+  b6:	c7 04 24 e8 03 00 00 	movl   $0x3e8,(%esp)
+  bd:	e8 fc ff ff ff       	call   be <read_cipher_file+0x5c>
+  c2:	89 45 f0             	mov    %eax,-0x10(%ebp)
+  c5:	8b 45 ec             	mov    -0x14(%ebp),%eax
+  c8:	89 44 24 08          	mov    %eax,0x8(%esp)
+  cc:	c7 44 24 04 e8 03 00 	movl   $0x3e8,0x4(%esp)
+  d3:	00 
+  d4:	8b 45 f0             	mov    -0x10(%ebp),%eax
+  d7:	89 04 24             	mov    %eax,(%esp)
+  da:	e8 fc ff ff ff       	call   db <read_cipher_file+0x79>
+  df:	85 c0                	test   %eax,%eax
+  e1:	75 31                	jne    114 <read_cipher_file+0xb2>
+  e3:	a1 00 00 00 00       	mov    0x0,%eax
+  e8:	89 44 24 0c          	mov    %eax,0xc(%esp)
+  ec:	c7 44 24 08 1f 00 00 	movl   $0x1f,0x8(%esp)
+  f3:	00 
+  f4:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+  fb:	00 
+  fc:	c7 04 24 50 00 00 00 	movl   $0x50,(%esp)
+ 103:	e8 fc ff ff ff       	call   104 <read_cipher_file+0xa2>
+ 108:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+ 10f:	e8 fc ff ff ff       	call   110 <read_cipher_file+0xae>
+ 114:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 117:	89 04 24             	mov    %eax,(%esp)
+ 11a:	e8 fc ff ff ff       	call   11b <read_cipher_file+0xb9>
+ 11f:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 122:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 125:	8d 50 ff             	lea    -0x1(%eax),%edx
+ 128:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 12b:	01 d0                	add    %edx,%eax
+ 12d:	0f b6 00             	movzbl (%eax),%eax
+ 130:	3c 0a                	cmp    $0xa,%al
+ 132:	75 0e                	jne    142 <read_cipher_file+0xe0>
+ 134:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 137:	8d 50 ff             	lea    -0x1(%eax),%edx
+ 13a:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 13d:	01 d0                	add    %edx,%eax
+ 13f:	c6 00 00             	movb   $0x0,(%eax)
+ 142:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 145:	c9                   	leave  
+ 146:	c3                   	ret    
+
+00000147 <get_login_key>:
+ 147:	55                   	push   %ebp
+ 148:	89 e5                	mov    %esp,%ebp
+ 14a:	83 ec 28             	sub    $0x28,%esp
+ 14d:	c7 04 24 32 00 00 00 	movl   $0x32,(%esp)
+ 154:	e8 fc ff ff ff       	call   155 <get_login_key+0xe>
+ 159:	89 45 f0             	mov    %eax,-0x10(%ebp)
+ 15c:	c7 04 24 70 00 00 00 	movl   $0x70,(%esp)
+ 163:	e8 fc ff ff ff       	call   164 <get_login_key+0x1d>
+ 168:	a1 00 00 00 00       	mov    0x0,%eax
+ 16d:	89 44 24 08          	mov    %eax,0x8(%esp)
+ 171:	c7 44 24 04 32 00 00 	movl   $0x32,0x4(%esp)
+ 178:	00 
+ 179:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 17c:	89 04 24             	mov    %eax,(%esp)
+ 17f:	e8 fc ff ff ff       	call   180 <get_login_key+0x39>
+ 184:	85 c0                	test   %eax,%eax
+ 186:	75 31                	jne    1b9 <get_login_key+0x72>
+ 188:	a1 00 00 00 00       	mov    0x0,%eax
+ 18d:	89 44 24 0c          	mov    %eax,0xc(%esp)
+ 191:	c7 44 24 08 1a 00 00 	movl   $0x1a,0x8(%esp)
+ 198:	00 
+ 199:	c7 44 24 04 01 00 00 	movl   $0x1,0x4(%esp)
+ 1a0:	00 
+ 1a1:	c7 04 24 86 00 00 00 	movl   $0x86,(%esp)
+ 1a8:	e8 fc ff ff ff       	call   1a9 <get_login_key+0x62>
+ 1ad:	c7 04 24 01 00 00 00 	movl   $0x1,(%esp)
+ 1b4:	e8 fc ff ff ff       	call   1b5 <get_login_key+0x6e>
+ 1b9:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 1bc:	89 04 24             	mov    %eax,(%esp)
+ 1bf:	e8 fc ff ff ff       	call   1c0 <get_login_key+0x79>
+ 1c4:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 1c7:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 1ca:	8d 50 ff             	lea    -0x1(%eax),%edx
+ 1cd:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 1d0:	01 d0                	add    %edx,%eax
+ 1d2:	0f b6 00             	movzbl (%eax),%eax
+ 1d5:	3c 0a                	cmp    $0xa,%al
+ 1d7:	75 0e                	jne    1e7 <get_login_key+0xa0>
+ 1d9:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 1dc:	8d 50 ff             	lea    -0x1(%eax),%edx
+ 1df:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 1e2:	01 d0                	add    %edx,%eax
+ 1e4:	c6 00 00             	movb   $0x0,(%eax)
+ 1e7:	8b 45 f0             	mov    -0x10(%ebp),%eax
+ 1ea:	c9                   	leave  
+ 1eb:	c3                   	ret    
+
+000001ec <decode>:
+ 1ec:	55                   	push   %ebp
+ 1ed:	89 e5                	mov    %esp,%ebp
+ 1ef:	83 ec 28             	sub    $0x28,%esp
+ 1f2:	8b 45 0c             	mov    0xc(%ebp),%eax
+ 1f5:	89 04 24             	mov    %eax,(%esp)
+ 1f8:	e8 fc ff ff ff       	call   1f9 <decode+0xd>
+ 1fd:	89 45 ec             	mov    %eax,-0x14(%ebp)
+ 200:	8b 45 08             	mov    0x8(%ebp),%eax
+ 203:	89 45 e8             	mov    %eax,-0x18(%ebp)
+ 206:	eb 64                	jmp    26c <decode+0x80>
+ 208:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 20b:	0f b6 00             	movzbl (%eax),%eax
+ 20e:	3c 60                	cmp    $0x60,%al
+ 210:	7e 0a                	jle    21c <decode+0x30>
+ 212:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 215:	0f b6 00             	movzbl (%eax),%eax
+ 218:	3c 7a                	cmp    $0x7a,%al
+ 21a:	7e 02                	jle    21e <decode+0x32>
+ 21c:	eb 4a                	jmp    268 <decode+0x7c>
+ 21e:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 221:	0f b6 00             	movzbl (%eax),%eax
+ 224:	0f be c0             	movsbl %al,%eax
+ 227:	83 e8 61             	sub    $0x61,%eax
+ 22a:	89 45 f0             	mov    %eax,-0x10(%ebp)
+ 22d:	8b 45 ec             	mov    -0x14(%ebp),%eax
+ 230:	8b 55 f0             	mov    -0x10(%ebp),%edx
+ 233:	8d 0c 02             	lea    (%edx,%eax,1),%ecx
+ 236:	ba 4f ec c4 4e       	mov    $0x4ec4ec4f,%edx
+ 23b:	89 c8                	mov    %ecx,%eax
+ 23d:	f7 ea                	imul   %edx
+ 23f:	c1 fa 03             	sar    $0x3,%edx
+ 242:	89 c8                	mov    %ecx,%eax
+ 244:	c1 f8 1f             	sar    $0x1f,%eax
+ 247:	29 c2                	sub    %eax,%edx
+ 249:	89 d0                	mov    %edx,%eax
+ 24b:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 24e:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 251:	6b c0 1a             	imul   $0x1a,%eax,%eax
+ 254:	29 c1                	sub    %eax,%ecx
+ 256:	89 c8                	mov    %ecx,%eax
+ 258:	89 45 f4             	mov    %eax,-0xc(%ebp)
+ 25b:	8b 45 f4             	mov    -0xc(%ebp),%eax
+ 25e:	83 c0 61             	add    $0x61,%eax
+ 261:	89 c2                	mov    %eax,%edx
+ 263:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 266:	88 10                	mov    %dl,(%eax)
+ 268:	83 45 e8 01          	addl   $0x1,-0x18(%ebp)
+ 26c:	8b 45 e8             	mov    -0x18(%ebp),%eax
+ 26f:	0f b6 00             	movzbl (%eax),%eax
+ 272:	84 c0                	test   %al,%al
+ 274:	75 92                	jne    208 <decode+0x1c>
+ 276:	8b 45 08             	mov    0x8(%ebp),%eax
+ 279:	c9                   	leave  
+ 27a:	c3                   	ret    
+
+0000027b <calculate_shifts>:
+ 27b:	55                   	push   %ebp
+ 27c:	89 e5                	mov    %esp,%ebp
+ 27e:	83 ec 10             	sub    $0x10,%esp
+ 281:	8b 45 08             	mov    0x8(%ebp),%eax
+ 284:	89 45 f8             	mov    %eax,-0x8(%ebp)
+ 287:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%ebp)
+ 28e:	eb 10                	jmp    2a0 <calculate_shifts+0x25>
+ 290:	8b 45 f8             	mov    -0x8(%ebp),%eax
+ 293:	0f b6 00             	movzbl (%eax),%eax
+ 296:	0f be c0             	movsbl %al,%eax
+ 299:	31 45 fc             	xor    %eax,-0x4(%ebp)
+ 29c:	83 45 f8 01          	addl   $0x1,-0x8(%ebp)
+ 2a0:	8b 45 f8             	mov    -0x8(%ebp),%eax
+ 2a3:	0f b6 00             	movzbl (%eax),%eax
+ 2a6:	84 c0                	test   %al,%al
+ 2a8:	75 e6                	jne    290 <calculate_shifts+0x15>
+ 2aa:	8b 4d fc             	mov    -0x4(%ebp),%ecx
+ 2ad:	ba 4f ec c4 4e       	mov    $0x4ec4ec4f,%edx
+ 2b2:	89 c8                	mov    %ecx,%eax
+ 2b4:	f7 ea                	imul   %edx
+ 2b6:	c1 fa 03             	sar    $0x3,%edx
+ 2b9:	89 c8                	mov    %ecx,%eax
+ 2bb:	c1 f8 1f             	sar    $0x1f,%eax
+ 2be:	29 c2                	sub    %eax,%edx
+ 2c0:	89 d0                	mov    %edx,%eax
+ 2c2:	6b c0 1a             	imul   $0x1a,%eax,%eax
+ 2c5:	29 c1                	sub    %eax,%ecx
+ 2c7:	89 c8                	mov    %ecx,%eax
+ 2c9:	99                   	cltd   
+ 2ca:	31 d0                	xor    %edx,%eax
+ 2cc:	89 45 fc             	mov    %eax,-0x4(%ebp)
+ 2cf:	29 55 fc             	sub    %edx,-0x4(%ebp)
+ 2d2:	83 7d fc 00          	cmpl   $0x0,-0x4(%ebp)
+ 2d6:	75 07                	jne    2df <calculate_shifts+0x64>
+ 2d8:	c7 45 fc 01 00 00 00 	movl   $0x1,-0x4(%ebp)
+ 2df:	8b 45 fc             	mov    -0x4(%ebp),%eax
+ 2e2:	c9                   	leave  
+ 2e3:	c3                   	ret    
